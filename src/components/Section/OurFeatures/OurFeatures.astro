@@ -1,0 +1,40 @@
+---
+import { Icon } from 'astro-icon/components'
+const features = [{logo:"maletin",
+                   title:"titulo1",
+                   txt:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ducimus amet eius porro? Dolorem, repudiandae?"},
+                   {logo:"money",
+                   title:"titulo2",
+                   txt:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ducimus amet eius porro? Dolorem"},
+                    {logo:"volante",
+                    title:"titulo3",
+                    txt:"Lorem ipsum dolor sit amet consectetur adipisicing elit.  ducimus amet eius porro? Dolorem, repudiandae?"},
+                    {logo:"informe",
+                    title:"titulo4",
+                    txt:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ducimus amet eius porro? Dolorem, repudiandae?"},
+                    {logo:"carpeta",
+                    title:"titulo5",
+                    txt:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ducimus amet eius porro?"},
+                    {logo:"almacenamiento",
+                    title:"titulo6",
+                    txt:"Lorem ipsum dolor sit, consectetur adipisicing elit. Praesentium, modi qui. Tempore aliquid facilis error pariatur? Aliquam, magnam."}
+                   ]
+---
+
+<section>
+    <h1 class="mb-5">OUR FEATURES</h1>
+    <p class="mb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum amet laborum, ipsum accusantium ducimus nam repellendus! Itaque assumenda quisquam ea, rerum voluptatibus temporibus reprehenderit illum inventore. Necessitatibus harum facere saepe?</p>
+    <div class="flex flex-wrap gap-10 justify-center">
+        {features.map((icono)=>{
+            return(
+            <div class="text-center max-w-lg">
+                <div class="inline-block p-4 bg-blue-800 rounded-md ">
+                    <Icon name={icono.logo} class="text-slate-100 text-5xl "/>
+                </div>
+                <h3 class="text-center font-bold text-xl">{icono.title}</h3>
+                <p>{icono.txt}</p>
+            </div>
+            )
+        })}
+    </div>
+</section>
