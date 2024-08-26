@@ -4,40 +4,42 @@ import Logo from '../../Logo/Logo.astro'
 ---
 
 <header class="w-full border">
-    <div class="flex flex-col max-w-6xl mx-auto border border-black">
-        <div class="py-5 px-2 lg:px-5 flex flex-col lg:flex-row justify-between items-center border-b-2">
-            <section class="flex gap-5 flex-wrap justify-center">
-                <div class="flex flex-col justify-center items-center ">
-                    <Icon name="Phone" class='text-center '/>
-                    <p class="text-sm text-center">342-45522558</p>
-                </div>
-                <div class="flex flex-col justify-center items-center ">
-                    <Icon name="Mail" class='text-center '/>
-                    <p class="text-sm text-center">text-prueba@hmail.com</p>
-                </div>
-                <div class="flex flex-col justify-center items-center ">
-                    <Icon name="Location" class='text-center '/>
-                    <p class="text-sm text-center">Av. San Martin 1234, Santa Fe, Malasia</p>
-                </div>
-            </section>
-            <section class="pt-5 py-3 flex gap-10">
-                <a href=""><Icon name="facebook"/></a>
-                <a href=""><Icon name="instagram"/></a>
-                <a href=""><Icon name="x"/></a>
-            </section>
+    <div class="flex flex-col border border-black">
+        <div class="w-full bg-sky-950">
+            <div class="py-1 px-2 max-w-6xl mx-auto lg:px-5 flex flex-col lg:flex-row justify-between items-center ">
+                <section class="flex gap-5 flex-wrap justify-center">
+                    <div class="flex flex-col justify-center items-center ">
+                        <Icon name="Phone" class='text-center text-lg text-slate-300'/>
+                        <p class="text-xs text-center text-slate-300">342-45522558</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center ">
+                        <Icon name="Mail" class='text-center text-lg text-slate-300'/>
+                        <p class="text-xs text-center text-slate-300">mail-prueba@hmail.com</p>
+                    </div>
+                    <div class="sm:flex sm:flex-col hidden justify-center items-center ">
+                        <Icon name="Location" class='text-center text-lg text-slate-300'/>
+                        <p class="text-xs text-center text-slate-300">Av. San Martin 1234, Santa Fe, Malasia</p>
+                    </div>
+                </section>
+                <section class="pt-5 py-3 flex gap-10">
+                    <a href=""><Icon name="facebook" class="text-xl text-slate-200"/></a>
+                    <a href=""><Icon name="instagram" class="text-xl text-slate-200"/></a>
+                    <a href=""><Icon name="x" class="text-xl text-slate-200"/></a>
+                </section>
+            </div>
         </div>
         <div class="py-5 flex justify-between px-5 items-center">
-            <div class="flex border p-0">
+            <div class="flex  p-0">
                 <Icon name="factory" class="text-5xl"/> <p class="justify-center items-center flex">CONS</p>
             </div>
             <div class="w-2/3">
                 <Icon name="MenuBurguer" title="Menu" class="text-5xl md:hidden ml-auto mr-5"/>
-                <section class="hidden md:block w-full border">
+                <section class="hidden md:block w-full">
                     <ul class="flex justify-evenly">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Our Features</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Service</a></li>
+                        <li><a href="" class="font-bold">Home</a></li>
+                        <li><a href="" class="font-bold">Our Features</a></li>
+                        <li><a href="" class="font-bold">Contact</a></li>
+                        <li><a href="" class="font-bold">Service</a></li>
                     </ul>
                 </section>
             </div>
