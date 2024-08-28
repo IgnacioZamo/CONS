@@ -1,39 +1,37 @@
-<div class="lg:grid lg:grid-cols-2 flex flex-col py-10">
+<div class="lg:grid lg:grid-cols-2 flex flex-col pt-10">
     <div>
-        <img src="https://sitio.c9businessolution.com/wp-content/uploads/2024/03/casco-oficina-2-scaled-1.webp" alt="">
+        <img src="https://sitio.c9businessolution.com/wp-content/uploads/2024/03/casco-oficina-2-scaled-1.webp" class="h-full" alt="">
     </div>
-    <div>
-        <h4 class="font-bold">Contact Us!</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, laborum architecto veniam repellat labore sunt.</p>
+    <div class="bg-gradient-to-r from-sky-700 to-sky-900 flex flex-col">
+        <h4 class="font-bold text-center text-slate-100 my-5">CONTÁCTANOS</h4>
+        <p class="m-5 text-slate-200 text-center w-4/5 mx-auto">Tienes alguna consulta o necesitas más información? No dudes en dejarnos tu mensaje. Estamos para ayudarte y brindarte el mejor servicio.</p>
         <div class="my-10">
             <form action="">
-                <div class="lg:grid lg:grid-cols-2 flex flex-col gap-3">
+                <div class="lg:grid lg:grid-cols-2 flex flex-col gap-5 w-4/5 mx-auto mb-10">
                     <div class="flex flex-col lg:block">
-                        <label for="name">Apellido y Nombre</label>
-                        <input type="text" id="name" name="name" placeholder="Apellido y Nombre">
+                        <input type="text" id="name" name="name" class="py-2 px-3" placeholder="Apellido y Nombre" required>
                     </div>
                     <div class="flex flex-col lg:block">
-                        <label for="mail">Email</label>
-                        <input type="text" id="mail" name="mail" placeholder="e-mail">
+                        <input type="text" id="mail" name="mail" class="py-2 px-3" placeholder="e-mail">
                     </div>
                     <div class="flex flex-col lg:block">
-                        <label for="phone">Telefono:</label>
-                        <input type="text" id="phone" name="phone" placeholder="Telefono">
+                        <input type="text" id="phone" name="phone" class="py-2 px-3" placeholder="Telefono" required>
                     </div>
                     <div class="flex flex-col lg:block">
-                        <label for="consulta">Seleccione categoria:</label>
-                        <select class="" id="consulta" name="consulta">
+                        <select id="consulta" name="consulta" class="py-2 px-3">
+                            <option value="" disabled selected >Seleccione opcion de consulta</opcion>
                             <option value="opcion1">Presupuesto</option>
                             <option value="opcion2">Consultas</option>
                             <option value="opcion3">Reclamos</option>
                         </select>
                     </div>
                     <div class="col-span-2 flex flex-col">
-                        <label for="comment">Deje su comentario:</label>
-                        <textarea name="comment" id="commment" placeholder="Dejenos su comentario, nos contactaremos a la brevedad" class="w-full"></textarea>
+                        <textarea name="comment" id="commment" placeholder="Dejenos su comentario, nos contactaremos a la brevedad" class="w-full h-20 py-2 px-3" required></textarea>
                     </div>
                 </div>
-                <button>Enviar consulta</button>
+                <div class="flex justify-center">
+                    <button class="py-2 px-3 rounded-md bg-gradient-to-r from-blue-800 to-slate-800 text-slate-100 | active:scale-105 transition">Enviar mensaje</button>
+                </div>
             </form>
         </div>
     </div>
