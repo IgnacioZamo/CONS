@@ -5,8 +5,8 @@ import Logo from '../../Logo/Logo.astro'
 
 <header class="w-full">
     <div class="flex flex-col ">
-        <div class="w-full bg-sky-950">
-            <div class="py-1 px-2 max-w-6xl mx-auto lg:px-5 flex flex-col lg:flex-row justify-between items-center ">
+        <div class="w-full bg-gradient-to-r from-sky-800 to-sky-950">
+            <div class="px-2 max-w-6xl mx-auto lg:px-5 flex flex-col lg:flex-row justify-between items-center ">
                 <section class="flex gap-5 flex-wrap justify-center">
                     <div class="flex flex-col justify-center items-center ">
                         <Icon name="Phone" class='text-center text-lg text-slate-300'/>
@@ -22,9 +22,9 @@ import Logo from '../../Logo/Logo.astro'
                     </div>
                 </section>
                 <section class="pt-5 py-3 flex gap-10">
-                    <a href=""><Icon name="facebook" class="text-xl text-slate-200"/></a>
-                    <a href=""><Icon name="instagram" class="text-xl text-slate-200"/></a>
-                    <a href=""><Icon name="x" class="text-xl text-slate-200"/></a>
+                    <a href=""><Icon name="facebook" class="text-xl text-slate-200 hover:scale-110 transition"/></a>
+                    <a href=""><Icon name="instagram" class="text-xl text-slate-200 hover:scale-110 transition"/></a>
+                    <a href=""><Icon name="x" class="text-xl text-slate-200 hover:scale-110 transition"/></a>
                 </section>
             </div>
         </div>
@@ -37,10 +37,10 @@ import Logo from '../../Logo/Logo.astro'
                 <Icon name="MenuBurguer" title="Menu" class="text-5xl md:hidden ml-auto mr-5"/>
                 <section class="hidden md:block w-full">
                     <ul class="flex justify-evenly">
-                        <li><a href="" class="font-bold text-xl">Home</a></li>
-                        <li><a href="" class="font-bold text-xl">Our Features</a></li>
-                        <li><a href="" class="font-bold text-xl">Contact</a></li>
-                        <li><a href="" class="font-bold text-xl">Service</a></li>
+                        <li><a href="/index" class="font-bold text-xl">Home</a></li>
+                        <li><a href="#ourfeatures" class="font-bold text-xl">Our Features</a></li>
+                        <li><a href="#contact" class="font-bold text-xl">Contact</a></li>
+                        <li><a href="" class="font-bold text-xl">Galeria</a></li>
                     </ul>
                 </section>
             </div>
