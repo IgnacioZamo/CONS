@@ -1,12 +1,11 @@
 ---
 import { Icon } from 'astro-icon/components'
-import Logo from '../../Logo/Logo.astro'
 ---
 
 <header class="w-full">
     <div class="flex flex-col ">
         <div class="w-full bg-gradient-to-r from-sky-800 to-sky-950">
-            <div class="px-2 max-w-6xl mx-auto lg:px-5 flex flex-col lg:flex-row justify-between items-center ">
+            <div class="px-2 max-w-6xl mx-auto lg:px-5 hidden md:flex flex-col lg:flex-row justify-between items-center ">
                 <section class="flex gap-5 flex-wrap justify-center">
                     <div class="flex flex-col justify-center items-center ">
                         <Icon name="Phone" class='text-center text-lg text-slate-300'/>
@@ -31,19 +30,35 @@ import Logo from '../../Logo/Logo.astro'
         <div class="py-5 flex justify-between px-5 items-center w-4/5 mx-auto">
             <div class="flex  p-0">
                 <a href=""><img src="/images/decoLogo1.png" class="h-20 hover:scale-105 transition hover:cursor-pointer"alt=""></a>
-                <!-- <Icon name="factory" class="text-5xl"/> <p class="justify-center items-center flex">CONS</p> -->
             </div>
             <div class="w-2/3">
-                <Icon name="MenuBurguer" title="Menu" class="text-5xl md:hidden ml-auto mr-5"/>
+                <Icon name="MenuBurguer" title="Menu" id="burguerMenu" class="text-5xl md:hidden ml-auto mr-5"/>
+                <!-- Submenúes en vista desktop -->
                 <section class="hidden md:block w-full">
                     <ul class="flex justify-evenly">
-                        <li><a href="/index" class="font-bold text-xl">Home</a></li>
+                        <li><a href="/" class="font-bold text-xl">Home</a></li>
                         <li><a href="#ourfeatures" class="font-bold text-xl">Our Features</a></li>
                         <li><a href="#contact" class="font-bold text-xl">Contact</a></li>
-                        <li><a href="" class="font-bold text-xl">Galeria</a></li>
+                        <li><a href="/gallery" class="font-bold text-xl">Galeria</a></li>
                     </ul>
                 </section>
+                <!-- Submenúes en vista mobile -->
+                <div class="hidden h-screen w-screen fixed top-0 right-0 z-10 bg-slate-100">
+                    <Icon name="close" class="absolute right-5 top-5 text-3xl"/>
+                    <div class="h-full flex items-center justify-center">
+                        <ul class="flex flex-col items-center my-auto gap-24">
+                            <li><a href="/" class="font-bold text-xl">Home</a></li>
+                            <li><a href="#ourfeatures" class="font-bold text-xl">Our Features</a></li>
+                            <li><a href="#contact" class="font-bold text-xl">Contact</a></li>
+                            <li><a href="/gallery" class="font-bold text-xl">Galeria</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </header>
+
+<script>
+
+</script>
