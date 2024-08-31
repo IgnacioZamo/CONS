@@ -1,1 +1,0 @@
-const burguer = document.getElementById("burguerMenu")

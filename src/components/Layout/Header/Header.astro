@@ -1,5 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
+
+
 ---
 
 <header class="w-full">
@@ -32,24 +34,24 @@ import { Icon } from 'astro-icon/components'
                 <a href=""><img src="/images/decoLogo1.png" class="h-20 hover:scale-105 transition hover:cursor-pointer"alt=""></a>
             </div>
             <div class="w-2/3">
-                <Icon name="MenuBurguer" title="Menu" id="burguerMenu" class="text-5xl md:hidden ml-auto mr-5"/>
+                <Icon name="MenuBurguer" title="Menu" id="burguer" class="text-5xl md:hidden ml-auto mr-5"/>
                 <!-- Submenúes en vista desktop -->
                 <section class="hidden md:block w-full">
                     <ul class="flex justify-evenly">
                         <li><a href="/" class="font-bold text-xl">Home</a></li>
-                        <li><a href="#ourfeatures" class="font-bold text-xl">Our Features</a></li>
-                        <li><a href="#contact" class="font-bold text-xl">Contact</a></li>
+                        <li><a href="#ourfeatures"  class="font-bold text-xl">Our Features</a></li>
+                        <li><a href="#contact"  class="font-bold text-xl">Contact</a></li>
                         <li><a href="/gallery" class="font-bold text-xl">Galeria</a></li>
                     </ul>
                 </section>
                 <!-- Submenúes en vista mobile -->
-                <div class="hidden h-screen w-screen fixed top-0 right-0 z-10 bg-slate-100">
-                    <Icon name="close" class="absolute right-5 top-5 text-3xl"/>
-                    <div class="h-full flex items-center justify-center">
+                <div id="contenedorMenu" class="h-screen w-screen fixed top-0 right-0 z-10 bg-slate-100 transition duration-500 ease-out">
+                    <Icon name="close" id="close" class="absolute right-5 top-5 text-3xl"/>
+                    <div class={`h-full flex items-center justify-center`}>
                         <ul class="flex flex-col items-center my-auto gap-24">
                             <li><a href="/" class="font-bold text-xl">Home</a></li>
-                            <li><a href="#ourfeatures" class="font-bold text-xl">Our Features</a></li>
-                            <li><a href="#contact" class="font-bold text-xl">Contact</a></li>
+                            <li><a href="#ourfeatures" id="ourfe" class="font-bold text-xl">Our Features</a></li>
+                            <li><a href="#contact" id="contacct" class="font-bold text-xl">Contact</a></li>
                             <li><a href="/gallery" class="font-bold text-xl">Galeria</a></li>
                         </ul>
                     </div>
@@ -60,5 +62,42 @@ import { Icon } from 'astro-icon/components'
 </header>
 
 <script>
+    const burguer = document.getElementById("burguer");
+    const close = document.getElementById("close");
+
+    const ourFeaturesLink = document.getElementById("ourfe");
+    const contactLink = document.getElementById("contacct");
+
+    const contenedorMenu = document.getElementById("contenedorMenu")
+
+    let menu = false
+
+    burguer.addEventListener("click", ()=>{
+        menu = true
+        contenedorMenu.classList.remove("translate-x-full");
+        contenedorMenu.classList.add("translate-x-0");
+        
+    })
+
+    close.addEventListener("click",()=>{
+        menu = false
+        contenedorMenu.classList.remove("translate-x-0");
+        contenedorMenu.classList.add("translate-x-full");
+    })
+
+    ourFeaturesLink.addEventListener("click",()=>{
+        menu = false
+        contenedorMenu.classList.remove("translate-x-0");
+        contenedorMenu.classList.add("translate-x-full");
+    })
+    contactLink.addEventListener("click",()=>{
+        menu = false
+        contenedorMenu.classList.remove("translate-x-0");
+        contenedorMenu.classList.add("translate-x-full");
+    })
+
+ if (menu==false){
+    contenedorMenu.classList.add("translate-x-full")
+ } 
 
 </script>
