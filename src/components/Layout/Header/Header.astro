@@ -45,7 +45,7 @@ import { Icon } from 'astro-icon/components'
                     </ul>
                 </section>
                 <!-- Submenúes en vista mobile -->
-                <div id="contenedorMenu" class="h-screen w-screen fixed top-0 right-0 z-10 bg-slate-100 transition duration-500 ease-out">
+                <div id="contenedorMenu" class="translate-x-full h-screen w-screen fixed top-0 right-0 z-10 bg-[#EFEED9] transition duration-500 ease-out">
                     <Icon name="close" id="close" class="absolute right-5 top-5 text-3xl"/>
                     <div class={`h-full flex items-center justify-center`}>
                         <ul class="flex flex-col items-center my-auto gap-24">
@@ -70,34 +70,31 @@ import { Icon } from 'astro-icon/components'
 
     const contenedorMenu = document.getElementById("contenedorMenu")
 
-    let menu = false
+    
 
     burguer.addEventListener("click", ()=>{
-        menu = true
+        
         contenedorMenu.classList.remove("translate-x-full");
         contenedorMenu.classList.add("translate-x-0");
-        
+
     })
 
     close.addEventListener("click",()=>{
-        menu = false
+        
         contenedorMenu.classList.remove("translate-x-0");
         contenedorMenu.classList.add("translate-x-full");
     })
 
     ourFeaturesLink.addEventListener("click",()=>{
-        menu = false
+        
         contenedorMenu.classList.remove("translate-x-0");
         contenedorMenu.classList.add("translate-x-full");
     })
     contactLink.addEventListener("click",()=>{
-        menu = false
+        
         contenedorMenu.classList.remove("translate-x-0");
         contenedorMenu.classList.add("translate-x-full");
     })
 
- if (menu==false){
-    contenedorMenu.classList.add("translate-x-full")
- } 
 
 </script>
