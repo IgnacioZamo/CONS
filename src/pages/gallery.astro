@@ -1,13 +1,13 @@
 ---
 import Header from '../components/Layout/Header/Header.astro'
 import Footer from '../components/Layout/Footer/Footer.astro'
-import Galleryy from '../components/Section/gallery/Galler.astro';
+import Galleryyy from '../components/Section/gallery/Galler.jsx'
 ---
 
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@ import Galleryy from '../components/Section/gallery/Galler.astro';
 </head>
 <body class="bg-[#EFEED9]">
     <Header />
-    <Galleryy />
+    <Galleryyy client:load/>
     <Footer/>
     
 </body>
