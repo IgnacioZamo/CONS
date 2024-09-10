@@ -1,21 +1,15 @@
-import { useState, useEffect } from 'preact/hooks';
+import { useState } from 'preact/hooks';
 import { galleryy } from './imagenes/imagenesGallery.astro';
 
 const Gallery = () => {
-    const [selectedColor, setSelectedColor] = useState(''); // useState es una función
-    const [filteredImages, setFilteredImages] = useState(galleryy); // useState también es una función
+    const [selectedColor, setSelectedColor] = useState('all'); // Estado inicial en 'all'
 
     const handleSelectChange = (event) => {
         setSelectedColor(event.target.value);
     };
 
-    useEffect(() => {
-        if (selectedColor === '' || selectedColor === 'all') {
-            setFilteredImages(galleryy); // Mostrar todas las imágenes
-        } else {
-            setFilteredImages(galleryy.filter(img => img.color === selectedColor));
-        }
-    }, [selectedColor]);
+    // Filtrar imágenes directamente en el renderizado
+    const filteredImages = selectedColor === 'all' ? galleryy : galleryy.filter(img => img.color === selectedColor);
 
     return (
         <div className="w-full h-full py-10 px-3">
@@ -32,7 +26,7 @@ const Gallery = () => {
                     <option value="verde">Verde oliva</option>
                 </select>
             </div>
-            <div className="flex flex-wrap gap-5 border justify-center">
+            <div className="flex flex-wrap gap-5 border justify-center transition">
                 {filteredImages.map((img, index) => (
                     <div key={index} className="flex justify-center border-black border-2">
                         <img src={img.link} className="w-36 sm:w-56 lg:w-72 hover:cursor-pointer hover:scale-105 transition duration-100 ease-out" alt="Imagen de galería" />
